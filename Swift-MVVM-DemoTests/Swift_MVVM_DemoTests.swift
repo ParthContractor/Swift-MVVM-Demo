@@ -19,7 +19,19 @@ class Swift_MVVM_DemoTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testLandingViewModel(){
+    func testStringToDate(){
+        let strDate = "1999-05-19"
+        XCTAssertNotNil(strDate.asDate)
+        XCTAssertNotEqual(strDate.asDate, Date())
+    }
+   
+    func testStringToDateWithUnexpectedFormat(){
+           let strDate = "09-11-1980"
+           XCTAssertNotNil(strDate.asDate)
+            XCTAssertEqual(strDate.asDate.dateWithoutTime(), Date().dateWithoutTime())
+    }
+    
+    func testMoviesListViewModel(){
         let objMoviesListViewModel = MoviesListViewModel()
         XCTAssertNotNil(objMoviesListViewModel)
         let exp = expectation(description: "fetchData")
