@@ -47,18 +47,27 @@ class MoviesListVC: UIViewController {
     
     
     @objc func refreshTable(){
+        viewModel.moviesListCache.removeObject(forKey: CacheKeys.moviesData as NSString)
         loadData()
     }
     
     private func loadData() {
-        showLoadingIndicator(onView: view)
-        viewModel.fetchData {
+        if let _ = viewModel.moviesListCache.object(forKey: CacheKeys.moviesData as NSString) {
             DispatchQueue.main.async {
-                //update UI
-                self.handleError()
-                self.handleNavigationTitle()
                 self.handleTableViewData()
-                self.removeLoadingIndicator()
+            }
+        }
+        else{
+            showLoadingIndicator(onView: view)
+            viewModel.fetchData {
+                DispatchQueue.main.async {
+                    //update UI
+                    self.handleError()
+                    self.handleNavigationTitle()
+                    self.handleTableViewData()
+                    self.removeLoadingIndicator()
+                    self.viewModel.cacheMoviesData(self.viewModel.dataSource)
+                }
             }
         }
     }

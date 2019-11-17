@@ -33,6 +33,12 @@ class MoviesDetailsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+//        if let _ = viewModel.moviesListCache.object(forKey: CacheKeys.moviesData as NSString) {
+//
+//        }
+//        else{
+//            
+//        }
         loadCharactersData()
     }
     

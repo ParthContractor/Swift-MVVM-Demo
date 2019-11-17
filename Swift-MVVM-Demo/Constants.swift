@@ -13,6 +13,10 @@ struct API_Str_URLs {
     static let movies = "https://swapi.co/api/films/"
 }
 
+struct CacheKeys {
+    static let moviesData = "MoviesDataContainer"
+}
+
 extension UIFont {
     struct ThemeFont {
         static let titleFont = UIFont.systemFont(ofSize: 22)

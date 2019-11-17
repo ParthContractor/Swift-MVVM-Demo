@@ -15,3 +15,18 @@ public struct MoviesData : Decodable {
         case movies = "results"
     }
 }
+
+class MoviesDataContainer: NSObject {
+    let data: [Movie]?
+    init(data: [Movie]? = nil) {
+        self.data = data
+    }
+}
+
+
+class MoviesCharactersContainer: NSObject {
+    let data: [Character]
+    init(data: [Character]) {
+        self.data = data
+    }
+}

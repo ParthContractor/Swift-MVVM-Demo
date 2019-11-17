@@ -18,10 +18,17 @@ class MoviesListViewModel: ConsumeRESTService {
     
     var dataSource: [Movie]?
     var RESTServiceError: Error?
+    let moviesListCache = NSCache<NSString, MoviesDataContainer>()
+
     
     func sortByRecentReleaseDate() {
         self.dataSource?.sort(){$0.release_date.asDate > $1.release_date.asDate}
     }
+    
+    func cacheMoviesData(_ moviesData: [Movie]?) {
+        let dataToCache = MoviesDataContainer(data: moviesData)
+        moviesListCache.setObject(dataToCache, forKey: CacheKeys.moviesData as NSString)
+        }
     
     func fetchData(completionHandler: @escaping () -> Void) {
         consumeRESTService(completionHandler:{ result,error  in
