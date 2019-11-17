@@ -36,9 +36,7 @@ class Swift_MVVM_DemoTests: XCTestCase {
         XCTAssertNotNil(objMoviesListViewModel)
         let exp = expectation(description: "fetchData")
         objMoviesListViewModel.fetchData {
-            DispatchQueue.main.async {
                 exp.fulfill()
-            }
         }
         waitForExpectations(timeout: 5)
         XCTAssertNotNil(objMoviesListViewModel.navigationBarTitleForLandingView)
@@ -54,13 +52,22 @@ class Swift_MVVM_DemoTests: XCTestCase {
         XCTAssertNil(objMovieDetailsModel.navigationBarTitleForLandingView)
         objMovieDetailsModel.navigationBarTitleForLandingView = "Test Title"
         XCTAssertEqual(objMovieDetailsModel.navigationBarTitleForLandingView,"Test Title")
-        let movieDetails = Movie(title: "Test Title", director: "Test director", producer: "Test producer", release_date: "1987-02-14")
+        let movieDetails = Movie(title: "Test Title", director: "Test director", producer: "Test producer", release_date: "1987-02-14", characters: ["https://swapi.co/api/people/1/","https://swapi.co/api/people/3/","https://swapi.co/api/people/5/"])
         objMovieDetailsModel.dataSource = movieDetails
         XCTAssertNotNil(objMovieDetailsModel.dataSource)
         XCTAssertEqual(objMovieDetailsModel.dataSource,movieDetails)
-        let movieDetails2 = Movie(title: "Test Title2", director: "Test director2", producer: "Test producer2", release_date: "1987-02-14")
+        let movieDetails2 = Movie(title: "Test Title2", director: "Test director2", producer: "Test producer2", release_date: "1987-02-14",  characters: ["https://swapi.co/api/people/1/","https://swapi.co/api/people/3/","https://swapi.co/api/people/5/"])
         XCTAssertNotEqual(objMovieDetailsModel.dataSource,movieDetails2)
-    }
+        objMovieDetailsModel.urlString = "https://swapi.co/api/people/1/"
+        let exp = expectation(description: "fetchCharactersData")
+        objMovieDetailsModel.fetchCharactersData {
+                exp.fulfill()
+        }
+        waitForExpectations(timeout: 15)
+        XCTAssertEqual(objMovieDetailsModel.listOfCharacters.count, 1)
+        let character = Character(name: "Luke Skywalker")
+        XCTAssertEqual(objMovieDetailsModel.listOfCharacters[0], character)
 
+    }
     
 }

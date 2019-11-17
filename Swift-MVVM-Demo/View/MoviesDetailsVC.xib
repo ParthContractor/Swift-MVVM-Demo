@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLz-Rl-4Dh">
-                    <rect key="frame" x="20" y="186" width="374" height="31"/>
+                    <rect key="frame" x="20" y="148" width="374" height="31"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="ghW-aN-Bvu"/>
                     </constraints>
@@ -32,7 +32,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F61-i0-Qeh">
-                    <rect key="frame" x="20" y="275" width="374" height="31"/>
+                    <rect key="frame" x="20" y="199" width="374" height="31"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="aKD-ad-nZd"/>
                     </constraints>
@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X7h-Og-XFD">
-                    <rect key="frame" x="8" y="335" width="398" height="527"/>
+                    <rect key="frame" x="8" y="259" width="398" height="603"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="g9l-Wl-Nx4"/>
@@ -61,7 +61,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="F61-i0-Qeh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="IsD-zW-e77"/>
-                <constraint firstItem="F61-i0-Qeh" firstAttribute="top" secondItem="QLz-Rl-4Dh" secondAttribute="bottom" constant="58" id="TMA-7f-wrU"/>
+                <constraint firstItem="F61-i0-Qeh" firstAttribute="top" secondItem="QLz-Rl-4Dh" secondAttribute="bottom" constant="20" id="TMA-7f-wrU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ria-SI-9ss" secondAttribute="trailing" constant="20" id="XHp-De-T8a"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F61-i0-Qeh" secondAttribute="trailing" constant="20" id="bhE-o3-i1c"/>
                 <constraint firstItem="X7h-Og-XFD" firstAttribute="top" secondItem="F61-i0-Qeh" secondAttribute="bottom" constant="29" id="hyP-KK-qwt"/>
@@ -72,7 +72,7 @@
                 <constraint firstItem="Ria-SI-9ss" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="53" id="wUL-f2-lJw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X7h-Og-XFD" secondAttribute="trailing" constant="8" id="wbd-GC-CZR"/>
                 <constraint firstItem="Ria-SI-9ss" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="x1i-Ih-hK7"/>
-                <constraint firstItem="QLz-Rl-4Dh" firstAttribute="top" secondItem="Ria-SI-9ss" secondAttribute="bottom" constant="58" id="z5i-Hg-8K1"/>
+                <constraint firstItem="QLz-Rl-4Dh" firstAttribute="top" secondItem="Ria-SI-9ss" secondAttribute="bottom" constant="20" id="z5i-Hg-8K1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="136.60714285714286"/>
