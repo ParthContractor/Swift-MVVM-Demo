@@ -26,6 +26,7 @@
 		B2EF7D252380C9E6004565D3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D242380C9E6004565D3 /* Movie.swift */; };
 		B2EF7D272380CDA0004565D3 /* ConsumeRESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D262380CDA0004565D3 /* ConsumeRESTService.swift */; };
 		B2EF7D292380DE56004565D3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D282380DE56004565D3 /* StringExtensions.swift */; };
+		B2EF7D2B2380E674004565D3 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = B2EF7D2A2380E674004565D3 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		B2EF7D242380C9E6004565D3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		B2EF7D262380CDA0004565D3 /* ConsumeRESTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumeRESTService.swift; sourceTree = "<group>"; };
 		B2EF7D282380DE56004565D3 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		B2EF7D2A2380E674004565D3 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		B2EF7CCB2380B963004565D3 = {
 			isa = PBXGroup;
 			children = (
+				B2EF7D2A2380E674004565D3 /* Readme.md */,
 				B2EF7CD62380B963004565D3 /* Swift-MVVM-Demo */,
 				B2EF7CED2380B964004565D3 /* Swift-MVVM-DemoTests */,
 				B2EF7CF82380B964004565D3 /* Swift-MVVM-DemoUITests */,
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2EF7D2B2380E674004565D3 /* Readme.md in Resources */,
 				B2EF7D0A2380BB82004565D3 /* MoviesListVC.xib in Resources */,
 				B2EF7CE42380B964004565D3 /* LaunchScreen.storyboard in Resources */,
 				B2EF7CE12380B964004565D3 /* Assets.xcassets in Resources */,
