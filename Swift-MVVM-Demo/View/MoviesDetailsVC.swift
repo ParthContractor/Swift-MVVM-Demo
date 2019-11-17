@@ -29,17 +29,16 @@ class MoviesDetailsVC: UIViewController {
         super.viewDidLoad()
         initialSetUp()
         moviewDetailsDataSetup()
+        cachedMovieCharactersSetup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//        if let _ = viewModel.moviesListCache.object(forKey: CacheKeys.moviesData as NSString) {
-//
-//        }
-//        else{
-//            
-//        }
-        loadCharactersData()
+        guard MovieDetailsViewModel.moviesCharactersCache.object(forKey: (self.viewModel.dataSource?.title ?? "N/A") as NSString) != nil else
+        {
+            loadCharactersData()
+            return
+        }
     }
     
     func initialSetUp(){
@@ -58,6 +57,16 @@ class MoviesDetailsVC: UIViewController {
         lblDirectorName.text = "Director: " + (viewModel.dataSource?.director ?? "N/A")
         lblProducerName.text = "Producer: " + (viewModel.dataSource?.producer ?? "N/A")
         lblReleaseDateName.text = "Release Date: " + (viewModel.dataSource?.release_date ?? "N/A")
+        
+    }
+    
+    private func cachedMovieCharactersSetup() {
+        if let cachedCharactersForKey = MovieDetailsViewModel.moviesCharactersCache.object(forKey: (self.viewModel.dataSource?.title ?? "N/A") as NSString) {
+            self.viewModel.listOfCharacters = cachedCharactersForKey.data
+            DispatchQueue.main.async {
+                self.tableViewMovieCharacters.reloadData()
+            }
+        }
     }
     
     private func loadCharactersData() {
@@ -78,6 +87,7 @@ class MoviesDetailsVC: UIViewController {
                 DispatchQueue.main.async {
                     self.tableViewMovieCharacters.reloadData()
                     self.removeLoadingIndicator()
+                    self.viewModel.cacheMoviesCharactersData(self.viewModel.listOfCharacters, keyMovieName: self.viewModel.dataSource?.title ?? "N/A")
                 }
             }
         }

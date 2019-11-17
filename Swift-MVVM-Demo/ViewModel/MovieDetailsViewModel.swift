@@ -19,11 +19,11 @@ class MovieDetailsViewModel: ConsumeRESTService {
     var listOfCharacters: [Character] = [Character]()
 
     var RESTServiceError: Error?
-    let moviesCharactersCache = NSCache<NSString, MoviesCharactersContainer>()
+    static let moviesCharactersCache = NSCache<NSString, MoviesCharactersContainer>()
 
     func cacheMoviesCharactersData(_ moviesCharData: [Character], keyMovieName: String) {
         let dataToCache = MoviesCharactersContainer(data: moviesCharData)
-        moviesCharactersCache.setObject(dataToCache, forKey: keyMovieName as NSString)
+        MovieDetailsViewModel.moviesCharactersCache.setObject(dataToCache, forKey: keyMovieName as NSString)
     }
     
     func fetchCharactersData(completionHandler: @escaping () -> Void) {
