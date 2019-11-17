@@ -22,6 +22,6 @@ extension UIColor {
     struct ThemeColor {
         static let navigationBarTintColor = UIColor.orange
         static let navigationTintColor = UIColor.yellow
-        static let titleColor = UIColor.red
+        static let titleColor = UIColor.orange
     }
 }

@@ -13,14 +13,16 @@ public struct Movie : Decodable, Equatable {
     let director: String
     let producer: String
     let release_date: String
+    let characters: [String]
 
     enum CodingKeys: String, CodingKey {
         case title
         case director
         case producer
         case release_date
+        case characters
     }
     public static func ==(lhs: Movie, rhs: Movie) -> Bool {
-        return lhs.title == rhs.title && lhs.director == rhs.director && lhs.producer == rhs.producer && lhs.release_date == rhs.release_date
+        return lhs.title == rhs.title && lhs.director == rhs.director && lhs.producer == rhs.producer && lhs.release_date == rhs.release_date && lhs.characters == rhs.characters
     }
 }

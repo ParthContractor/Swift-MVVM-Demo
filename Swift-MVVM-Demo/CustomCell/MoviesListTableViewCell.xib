@@ -36,7 +36,7 @@
             <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="movieNameLabel" destination="Nxh-OL-iKe" id="wty-TY-Fip"/>
+                <outlet property="titleLabelText" destination="Nxh-OL-iKe" id="LRK-Jo-LUd"/>
             </connections>
             <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
         </tableViewCell>

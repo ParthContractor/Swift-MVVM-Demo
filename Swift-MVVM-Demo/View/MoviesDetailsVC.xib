@@ -13,6 +13,7 @@
                 <outlet property="lblDirectorName" destination="Ria-SI-9ss" id="0qN-DO-gy5"/>
                 <outlet property="lblProducerName" destination="QLz-Rl-4Dh" id="UNP-f4-Q2H"/>
                 <outlet property="lblReleaseDateName" destination="F61-i0-Qeh" id="eqK-oy-bDD"/>
+                <outlet property="tableViewMovieCharacters" destination="X7h-Og-XFD" id="UtL-v0-ph0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,6 +40,14 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="X7h-Og-XFD">
+                    <rect key="frame" x="8" y="335" width="398" height="527"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="g9l-Wl-Nx4"/>
+                        <outlet property="delegate" destination="-1" id="pEL-h8-A7g"/>
+                    </connections>
+                </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ria-SI-9ss">
                     <rect key="frame" x="20" y="97" width="374" height="31"/>
                     <constraints>
@@ -55,9 +64,13 @@
                 <constraint firstItem="F61-i0-Qeh" firstAttribute="top" secondItem="QLz-Rl-4Dh" secondAttribute="bottom" constant="58" id="TMA-7f-wrU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ria-SI-9ss" secondAttribute="trailing" constant="20" id="XHp-De-T8a"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F61-i0-Qeh" secondAttribute="trailing" constant="20" id="bhE-o3-i1c"/>
+                <constraint firstItem="X7h-Og-XFD" firstAttribute="top" secondItem="F61-i0-Qeh" secondAttribute="bottom" constant="29" id="hyP-KK-qwt"/>
                 <constraint firstItem="QLz-Rl-4Dh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="jfb-eX-lYZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QLz-Rl-4Dh" secondAttribute="trailing" constant="20" id="nQx-xp-h66"/>
+                <constraint firstItem="X7h-Og-XFD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="pJo-rF-wH6"/>
+                <constraint firstItem="X7h-Og-XFD" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ulD-lZ-bad"/>
                 <constraint firstItem="Ria-SI-9ss" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="53" id="wUL-f2-lJw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X7h-Og-XFD" secondAttribute="trailing" constant="8" id="wbd-GC-CZR"/>
                 <constraint firstItem="Ria-SI-9ss" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="x1i-Ih-hK7"/>
                 <constraint firstItem="QLz-Rl-4Dh" firstAttribute="top" secondItem="Ria-SI-9ss" secondAttribute="bottom" constant="58" id="z5i-Hg-8K1"/>
             </constraints>

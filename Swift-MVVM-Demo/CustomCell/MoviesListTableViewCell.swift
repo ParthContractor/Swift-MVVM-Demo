@@ -11,7 +11,7 @@ import UIKit
 class MoviesListTableViewCell: UITableViewCell {
 
     static let cellIdentifier = "MoviesListTableViewCellId"
-    @IBOutlet var movieNameLabel: UILabel!
+    @IBOutlet var titleLabelText: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,13 +21,13 @@ class MoviesListTableViewCell: UITableViewCell {
     
     var movieNameLabelFont = UIFont.ThemeFont.titleFont {
         didSet {
-            movieNameLabel.font = movieNameLabelFont
+            titleLabelText.font = movieNameLabelFont
         }
     }
 
     private func decorateMovieNameLabel()  {
-        movieNameLabel.adjustsFontSizeToFitWidth = false
-        movieNameLabel.font = movieNameLabelFont
-        movieNameLabel.textColor = UIColor.ThemeColor.titleColor
+        titleLabelText.adjustsFontSizeToFitWidth = false
+        titleLabelText.font = movieNameLabelFont
+        titleLabelText.textColor = UIColor.ThemeColor.titleColor
     }
 }

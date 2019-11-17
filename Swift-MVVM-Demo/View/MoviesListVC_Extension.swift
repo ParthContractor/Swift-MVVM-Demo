@@ -26,7 +26,7 @@ extension MoviesListVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MoviesListTableViewCell.cellIdentifier) as! MoviesListTableViewCell
         if let rowsData = self.viewModel.dataSource {
-            cell.movieNameLabel.text = rowsData[indexPath.row].title
+            cell.titleLabelText.text = rowsData[indexPath.row].title
         }
         return cell
     }
