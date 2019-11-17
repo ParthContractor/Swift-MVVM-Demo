@@ -48,6 +48,7 @@ class MoviesListVC: UIViewController {
     
     @objc func refreshTable(){
         viewModel.moviesListCache.removeObject(forKey: CacheKeys.moviesData as NSString)
+        MovieDetailsViewModel.moviesCharactersCache.removeAllObjects()
         loadData()
     }
     
