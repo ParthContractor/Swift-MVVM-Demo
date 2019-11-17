@@ -15,7 +15,7 @@ struct API_Str_URLs {
 
 extension UIFont {
     struct ThemeFont {
-        static let titleFont = UIFont.systemFont(ofSize: 25)
+        static let titleFont = UIFont.systemFont(ofSize: 22)
     }
 }
 extension UIColor {

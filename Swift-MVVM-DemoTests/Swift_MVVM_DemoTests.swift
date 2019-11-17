@@ -47,4 +47,20 @@ class Swift_MVVM_DemoTests: XCTestCase {
         XCTAssertNotEqual(objMoviesListViewModel.dataSource?.count, 0)
     }
     
+    func testMovieDetailsModel(){
+        let objMovieDetailsModel = MovieDetailsViewModel()
+        XCTAssertNotNil(objMovieDetailsModel)
+        XCTAssertNil(objMovieDetailsModel.dataSource)
+        XCTAssertNil(objMovieDetailsModel.navigationBarTitleForLandingView)
+        objMovieDetailsModel.navigationBarTitleForLandingView = "Test Title"
+        XCTAssertEqual(objMovieDetailsModel.navigationBarTitleForLandingView,"Test Title")
+        let movieDetails = Movie(title: "Test Title", director: "Test director", producer: "Test producer", release_date: "1987-02-14")
+        objMovieDetailsModel.dataSource = movieDetails
+        XCTAssertNotNil(objMovieDetailsModel.dataSource)
+        XCTAssertEqual(objMovieDetailsModel.dataSource,movieDetails)
+        let movieDetails2 = Movie(title: "Test Title2", director: "Test director2", producer: "Test producer2", release_date: "1987-02-14")
+        XCTAssertNotEqual(objMovieDetailsModel.dataSource,movieDetails2)
+    }
+
+    
 }

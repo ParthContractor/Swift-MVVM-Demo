@@ -30,4 +30,15 @@ extension MoviesListVC: UITableViewDataSource, UITableViewDelegate {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView,
+                   didSelectRowAt indexPath: IndexPath) {
+        let movieDetailsVC = MoviesDetailsVC(nibName: "MoviesDetailsVC")
+        if let rowsData = self.viewModel.dataSource {
+            movieDetailsVC.viewModel.navigationBarTitleForLandingView = rowsData[indexPath.row].title
+            movieDetailsVC.viewModel.dataSource = rowsData[indexPath.row]
+        }
+        self.navigationController?.pushViewController(movieDetailsVC, animated: true)
+    }
+
 }
