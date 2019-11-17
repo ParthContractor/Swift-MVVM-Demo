@@ -25,6 +25,7 @@
 		B2EF7D232380C9A8004565D3 /* MoviesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D222380C9A8004565D3 /* MoviesData.swift */; };
 		B2EF7D252380C9E6004565D3 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D242380C9E6004565D3 /* Movie.swift */; };
 		B2EF7D272380CDA0004565D3 /* ConsumeRESTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D262380CDA0004565D3 /* ConsumeRESTService.swift */; };
+		B2EF7D292380DE56004565D3 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D282380DE56004565D3 /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		B2EF7D222380C9A8004565D3 /* MoviesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesData.swift; sourceTree = "<group>"; };
 		B2EF7D242380C9E6004565D3 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		B2EF7D262380CDA0004565D3 /* ConsumeRESTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumeRESTService.swift; sourceTree = "<group>"; };
+		B2EF7D282380DE56004565D3 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				B2EF7D112380BBB3004565D3 /* UIViewControllerExtensions.swift */,
 				B2EF7D122380BBB3004565D3 /* UIViewExtensions.swift */,
 				B2EF7D192380C3CE004565D3 /* UITableViewExtensions.swift */,
+				B2EF7D282380DE56004565D3 /* StringExtensions.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				B2EF7D162380BBB3004565D3 /* UIViewExtensions.swift in Sources */,
 				B2EF7D132380BBB3004565D3 /* MoviesListTableViewCell.swift in Sources */,
 				B2EF7D272380CDA0004565D3 /* ConsumeRESTService.swift in Sources */,
+				B2EF7D292380DE56004565D3 /* StringExtensions.swift in Sources */,
 				B2EF7D1A2380C3CE004565D3 /* UITableViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

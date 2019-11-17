@@ -19,6 +19,10 @@ class MoviesListViewModel: ConsumeRESTService {
     var dataSource: [Movie]?
     var RESTServiceError: Error?
     
+    func sortByRecentReleaseDate() {
+        self.dataSource?.sort(){$0.release_date.asDate > $1.release_date.asDate}
+    }
+    
     func fetchData(completionHandler: @escaping () -> Void) {
         consumeRESTService(completionHandler:{ result,error  in
             //Error if any
@@ -33,6 +37,7 @@ class MoviesListViewModel: ConsumeRESTService {
                 
                 if let rowsData = result.movies {
                     self.dataSource = rowsData
+                    self.sortByRecentReleaseDate()
                 }
                 completionHandler()
             }
