@@ -33,6 +33,7 @@
 		B2EF7D332380F79D004565D3 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D322380F79D004565D3 /* MovieDetailsViewModel.swift */; };
 		B2EF7D352381075D004565D3 /* MoviesDetailsVC_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D342381075D004565D3 /* MoviesDetailsVC_Extension.swift */; };
 		B2EF7D3923810C63004565D3 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D3823810C62004565D3 /* Character.swift */; };
+		B2EF7D3B23817036004565D3 /* CachingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EF7D3A23817036004565D3 /* CachingModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		B2EF7D322380F79D004565D3 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		B2EF7D342381075D004565D3 /* MoviesDetailsVC_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailsVC_Extension.swift; sourceTree = "<group>"; };
 		B2EF7D3823810C62004565D3 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		B2EF7D3A23817036004565D3 /* CachingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				B2EF7D222380C9A8004565D3 /* MoviesData.swift */,
 				B2EF7D242380C9E6004565D3 /* Movie.swift */,
 				B2EF7D3823810C62004565D3 /* Character.swift */,
+				B2EF7D3A23817036004565D3 /* CachingModels.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				B2EF7D2D2380F35E004565D3 /* DateExtensions.swift in Sources */,
 				B2EF7D3923810C63004565D3 /* Character.swift in Sources */,
 				B2EF7D332380F79D004565D3 /* MovieDetailsViewModel.swift in Sources */,
+				B2EF7D3B23817036004565D3 /* CachingModels.swift in Sources */,
 				B2EF7D182380BDB1004565D3 /* Constants.swift in Sources */,
 				B2EF7D162380BBB3004565D3 /* UIViewExtensions.swift in Sources */,
 				B2EF7D132380BBB3004565D3 /* MoviesListTableViewCell.swift in Sources */,
