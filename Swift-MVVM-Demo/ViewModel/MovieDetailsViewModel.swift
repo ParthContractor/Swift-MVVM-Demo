@@ -9,7 +9,7 @@
 import Foundation
 
 class MovieDetailsViewModel: ConsumeRESTService {
-    var urlString: String = ""
+    var urlString: String = ""//over here url(to fetch data) will be dynamic for each character in movie hence to be provided from outside for each character within the film
     
     typealias T = Character
     
