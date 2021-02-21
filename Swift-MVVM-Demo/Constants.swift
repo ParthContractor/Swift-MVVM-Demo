@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct API_Str_URLs {
-    static let movies = "https://swapi.co/api/films/"
+    static let movies = "https://swapi.dev/api/films/"
 }
 
 struct CacheKeys {
