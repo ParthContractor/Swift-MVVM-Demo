@@ -1,7 +1,7 @@
 
 *******SWAPI*******
 
-The goal is to create a simple iOS app for the SWAPI API (https://swapi.co/).
+The goal is to create a simple iOS app for the SWAPI API (https://swapi.dev/).
 
 The app should display:
 • A list of the movies with the most recent movie being displayed first.
